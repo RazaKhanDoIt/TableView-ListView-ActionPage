@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Week9_ListView.TableViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="BACKUP">
+                        <SwitchCell Text="Image Backup " On="False"/>
+                        <SwitchCell Text="Message Backup" On="True"/>
+                        <SwitchCell Text="Video Backup" On="False"/>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Backup Freq"/>
+                                <Slider Maximum="7" Minimum="1" HorizontalOptions="FillAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                        
+                    </TableSection>
+                    <TableSection Title="Crypto">
+                        <SwitchCell Text=" Crypto info" On="True"></SwitchCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

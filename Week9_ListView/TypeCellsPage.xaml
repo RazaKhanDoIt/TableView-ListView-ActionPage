@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Week9_ListView.TypeCellsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="employeeList">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Job}" DetailColor="Red" TextColor="Blue"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <ListView x:Name="employeeListPic">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Name}" Detail="{Binding Job}" ImageSource="{Binding Picture}" DetailColor="Red" TextColor="Blue"/>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <TableView>
+                <TableSection Title="Registration">
+                 <EntryCell Label="Name" Placeholder="Enter the Name" />
+                    <EntryCell Label="Job" Placeholder=" Enter your job"/>
+                </TableSection>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

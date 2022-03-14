@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mod="clr-namespace:Week9_ListView"
+             x:Class="Week9_ListView.ListViewPages">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView>
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type mod:Person}">
+                        <mod:Person Name="Raza" Age="28"/>
+                        <mod:Person Name="Gurps" Age="24"/>
+                        <mod:Person Name="Shaun" Age="28"/>
+                        <mod:Person Name="Alex" Age="22"/>
+                    </x:Array>
+                    
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" />
+                            <Label  Text=" -> "/>
+                            <Label  Text="{Binding Age}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="5" Color="Black"/>
+            
+            <ListView x:Name="listPerson">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" />
+                                <Label  Text=" -> "/>
+                                <Label  Text="{Binding Age}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
